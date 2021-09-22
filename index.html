@@ -18,27 +18,16 @@
         <div class="examples-container">
           <div class="sample">
             <div id="webXR" class="demo">
-              <model-viewer src="assets/audi_q4/Audi_Q4_purple.glb" poster="assets/audi_q4/Audi_Q4_purple.webp"
-                camera-controls environment-image="aircraft_workshop_01_1k.hdr" camera-orbit="-10deg 85deg auto"
-                shadow-intensity="4" ar ios-src="assets/audi_q4/Audi_Q4_purple.usdz">
-
-                <button slot="ar-button" id="ar-button">
-                  <div id="ar-prompt">
-                    <img src="ar_hand_prompt.png">
-                  </div>
-                  View in your space
-                </button>
-                
-      
-                <div id="ar-prompt">
-                  <div id="ar-prompt">
-                    <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-                  </div>
+              <model-viewer src="Horse.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
                 </div>
-      
-        <button id="ar-failure">
-          AR is not tracking!
-        </button>
+                <button slot="ar-button" id="ar-button">
+                    View in your space
+                </button>
+                <div id="ar-prompt">
+                    <img src="ar_hand_prompt.png">
+                </div>
       
         <div class="slider">
           <div class="slides">
