@@ -15,36 +15,55 @@
   <body>
     <body cz-shortcut-listen="true">
       <div class="examples-page">
+        <div class="content">
+          <div class="wrapper">
+    
+            <div class="heading">
+              <h2 class="demo-title">WebXR Demo</h2>
+              <h4>Customize a WebXR Augmented Reality session with HTML, CSS, and JS in Chrome 83+ on Android.</h4>
+              <p>
+                This demonstrates the use of slots, as well as shared and unshared DOM between the 3D and AR modes.
+              </p>
+              <p>
+                A slot is used here for replacing the default AR button with a custom one - in this case
+                the one recommended by SceneViewer. This is not the default only because this way localization of the text is left
+                to whatever system you prefer to use. Note the AR button will only be visible on AR-capable devices.
+              </p>
+          </div>
+        </div>
         <div class="examples-container">
           <div class="sample">
             <div id="webXR" class="demo">
-              <model-viewer src="Horse.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
-                <div class="progress-bar hide" slot="progress-bar">
-                    <div class="update-bar"></div>
-                </div>
+              <model-viewer src="assets/audi_q4/Audi_Q4_purple.glb" poster="assets/audi_q4/Audi_Q4_purple.webp"
+                camera-controls environment-image="aircraft_workshop_01_1k.hdr" camera-orbit="-10deg 85deg auto"
+                shadow-intensity="4" ar ios-src="assets/audi_q4/Audi_Q4_purple.usdz">
+
                 <button slot="ar-button" id="ar-button">
-                    View in your space
+                  View in your space
                 </button>
                 <div id="ar-prompt">
-                    <img src="ar_hand_prompt.png">
+                  <img src="ar_hand_prompt.png">
                 </div>
       
-        <div class="slider">
-          <div class="slides">
-            <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('../../assets/ShopifyModels/Chair.png');">
+                <div id="ar-prompt">
+                  <div id="ar-prompt">
+                    <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+                  </div>
+                </div>
       
-            </button><button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../../assets/ShopifyModels/Mixer.png');">
+                <button id="ar-failure">
+                  AR is not tracking!
+                </button>
       
-            </button><button class="slide" onclick="switchSrc(this, 'GeoPlanter')" style="background-image: url('../../assets/ShopifyModels/GeoPlanter.png');">
-            
-            </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')" style="background-image: url('../../assets/ShopifyModels/ToyTrain.png');">
-            
-            </button><button class="slide" onclick="switchSrc(this, 'Canoe')" style="background-image: url('../../assets/ShopifyModels/Canoe.png');">    
-          </button></div>
-        </div>
-      </model-viewer>
+                <div class="slider">
+                    <div class="slides">
+                      <button class="slide selected" onclick="switchSrc(this, 'Chair')" style="background-image: url('assets/audi_q4/Audi_Q4_purple.webp');"></button>           
+                      <button class="slide" onclick="switchSrc(this, 'Mixer')" style="background-image: url('../../assets/ShopifyModels/Mixer.png');"></button>  
+                    </div>
+                </div>
+              </model-viewer>
       
-      <script type="module">
+        <script type="module">
         const modelViewer = document.querySelector("model-viewer");
       
         window.switchSrc = (element, name) => {
@@ -189,7 +208,7 @@
         }
       
       </style>
-                  </div>
+          </div>
             <div class="content">
               <div class="wrapper">
         
