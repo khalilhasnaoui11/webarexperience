@@ -13,9 +13,40 @@
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
   </head>
   <body>
-
     <div id="webXR" class="demo">
-      <model-viewer id="model_1" src="assets/audi_q4/Audi_Q4_purple.glb" poster="assets/audi_q4/Audi_Q4_purple.webp"
+      <model-viewer id="model_1" src="assets/Dacia_sandero/Dacia_sandero_bleu_iron.glb" poster="assets/Dacia_sandero/Dacia_sandero_bleu_iron.webp"
+    camera-controls environment-image="aircraft_workshop_01_1k.hdr" camera-orbit="-10deg 85deg auto"
+    shadow-intensity="4" ar ios-src="assets/Dacia_sandero/Dacia_sandero_bleu_iron.usdz">
+      
+      <button slot="ar-button" id="ar-button">
+        View in your space
+      </button>
+    
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+      </div>
+    
+      <button id="ar-failure">
+        AR is not tracking!
+      </button>
+    
+      <div class="slider">
+        <div class="slides">
+          <button class="slide selected" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_bleu_iron')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_bleu_iron.webp');">
+    
+          </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_gris_highland')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_gris_highland.webp');">
+    
+          </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_noir_nacre')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_noir_nacre.webp');">
+          
+          </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_orange_atacama')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_orange_atacama.webp');">
+          
+          
+        </button></div>
+      </div>
+    </model-viewer>
+    </div>
+    <div id="webXR" class="demo">
+      <model-viewer id="model_0" src="assets/audi_q4/Audi_Q4_purple.glb" poster="assets/audi_q4/Audi_Q4_purple.webp"
       camera-controls environment-image="aircraft_workshop_01_1k.hdr" camera-orbit="-10deg 85deg auto"
       shadow-intensity="4" ar ios-src="assets/audi_q4/Audi_Q4_purple.usdz">
         
@@ -47,8 +78,8 @@
       </model-viewer>
       
       <script type="module">
-        const modelViewer_1 = document.getElementById("model_0");
-        const modelViewer_0 = document.getElementById("model_1");
+        const modelViewer_0 = document.getElementById("model_0");
+        const modelViewer_1 = document.getElementById("model_1");
 
         window.switchSrc = (element, name) => {
           if(name.includes("audi", 0)){
@@ -204,38 +235,7 @@
       
       </style>
       </div>
-      <div id="webXR" class="demo">
-        <model-viewer id="model_0" src="assets/Dacia_sandero/Dacia_sandero_bleu_iron.glb" poster="assets/Dacia_sandero/Dacia_sandero_bleu_iron.webp"
-      camera-controls environment-image="aircraft_workshop_01_1k.hdr" camera-orbit="-10deg 85deg auto"
-      shadow-intensity="4" ar ios-src="assets/Dacia_sandero/Dacia_sandero_bleu_iron.usdz">
-        
-        <button slot="ar-button" id="ar-button">
-          View in your space
-        </button>
-      
-        <div id="ar-prompt">
-          <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-        </div>
-      
-        <button id="ar-failure">
-          AR is not tracking!
-        </button>
-      
-        <div class="slider">
-          <div class="slides">
-            <button class="slide selected" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_bleu_iron')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_bleu_iron.webp');">
-      
-            </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_gris_highland')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_gris_highland.webp');">
-      
-            </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_noir_nacre')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_noir_nacre.webp');">
-            
-            </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_orange_atacama')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_orange_atacama.webp');">
-            
-            
-          </button></div>
-        </div>
-      </model-viewer>
-      </div>
+
 
         <script type="module" src="https://modelviewer.dev/examples/built/docs-and-examples.js">
         </script>
