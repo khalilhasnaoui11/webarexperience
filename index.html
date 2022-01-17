@@ -236,7 +236,33 @@
         </div>
       </model-viewer>
       </div>
-      <model-viewer src="https://modelviewer.dev//shared-assets/models/Astronaut.glb" ar ar-scale="fixed" camera-controls alt="A 3D model of an astronaut" skybox-image="https://modelviewer.dev/shared-assets/environments/aircraft_workshop_01_1k.hdr" ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz" xr-environment></model-viewer>
+      <model-viewer src="https://modelviewer.dev//shared-assets/models/Astronaut.glb" ar ar-scale="fixed" camera-controls alt="A 3D model of an astronaut" skybox-image="https://modelviewer.dev/shared-assets/environments/aircraft_workshop_01_1k.hdr" ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz" xr-environment>
+        <button slot="ar-button" id="ar-button">
+          View in your space
+        </button>
+      
+        <div id="ar-prompt">
+          <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+      
+        <button id="ar-failure">
+          AR is not tracking!
+        </button>
+      
+        <div class="slider">
+          <div class="slides">
+            <button class="slide selected" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_bleu_iron')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_bleu_iron.webp');">
+      
+            </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_gris_highland')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_gris_highland.webp');">
+      
+            </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_noir_nacre')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_noir_nacre.webp');">
+            
+            </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_orange_atacama')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_orange_atacama.webp');">
+            
+            
+          </button></div>
+        </div>
+      </model-viewer>
 
         <script type="module" src="https://modelviewer.dev/examples/built/docs-and-examples.js">
         </script>
