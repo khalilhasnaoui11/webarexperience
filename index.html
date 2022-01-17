@@ -205,9 +205,11 @@
       </style>
       </div>
       
-      <model-viewer src="assets/Dacia_sandero/Dacia_sandero_bleu_iron.glb" poster="assets/Dacia_sandero/Dacia_sandero_bleu_iron.webp"
+      <div id="webXR" class="demo">
+        <model-viewer id="model_1" src="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.glb" poster="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.webp"
       camera-controls environment-image="aircraft_workshop_01_1k.hdr" camera-orbit="-10deg 85deg auto"
-      shadow-intensity="4" ar ios-src="assets/Dacia_sandero/Dacia_sandero_bleu_iron.usdz">
+      shadow-intensity="4" ar ios-src="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.usdz">
+        
         <button slot="ar-button" id="ar-button">
           View in your space
         </button>
@@ -222,19 +224,19 @@
       
         <div class="slider">
           <div class="slides">
-            <button class="slide selected" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_bleu_iron')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_bleu_iron.webp');">
+            <button class="slide selected" onclick="switchSrc(this, 'Dacia_Sandero/Dacia_sandero_bleu_iron')" style="background-image: url('assets/Dacia_Sandero/Dacia_sandero_bleu_iron.webp');">
       
-            </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_gris_highland')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_gris_highland.webp');">
+            </button><button class="slide" onclick="switchSrc(this, 'Dacia_Sandero/Dacia_sandero_gris_highland')" style="background-image: url('assets/Dacia_Sandero/Dacia_sandero_gris_highland.webp');">
       
-            </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_noir_nacre')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_noir_nacre.webp');">
+            </button><button class="slide" onclick="switchSrc(this, 'Dacia_Sandero/Dacia_sandero_noir_nacre')" style="background-image: url('assets/Dacia_Sandero/Dacia_sandero_noir_nacre.webp');">
             
-            </button><button class="slide" onclick="switchSrc(this, 'Dacia_sandero/Dacia_sandero_orange_atacama')" style="background-image: url('assets/Dacia_sandero/Dacia_sandero_orange_atacama.webp');">
+            </button><button class="slide" onclick="switchSrc(this, 'Dacia_Sandero/Dacia_sandero_orange_atacama')" style="background-image: url('assets/Dacia_Sandero/Dacia_sandero_orange_atacama.webp');">
             
             
           </button></div>
         </div>
       </model-viewer>
-
+      </div>
         <script type="module" src="https://modelviewer.dev/examples/built/docs-and-examples.js">
         </script>
         <script type="module">
