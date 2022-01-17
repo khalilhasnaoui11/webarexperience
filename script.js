@@ -12,4 +12,5 @@ const onProgress = (event) => {
     }
   }
 };
-document.querySelector('model-viewer').addEventListener('progress', onProgress);
+document.getElementById("model_0").addEventListener('progress', onProgress);
+document.getElementById("model_1").addEventListener('progress', onProgress);
