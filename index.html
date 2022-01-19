@@ -13,11 +13,12 @@
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
   </head>
   <body>
-
+    <h2 class="Audi">Audi Q4 e-tron</h2>
     <div id="webXR" class="demo">
+      
       <model-viewer id="model_0" src="assets/audi_q4/Audi_Q4_purple.glb" poster="assets/audi_q4/Audi_Q4_purple.webp"
       camera-controls environment-image="neutral" camera-orbit="-10deg 85deg auto"
-      shadow-intensity="4" ar ios-src="assets/audi_q4/Audi_Q4_purple.usdz">
+      shadow-intensity="4" ar ios-src="assets/audi_q4/Audi_Q4_purple.usdz" xr-environment>
         
         <button slot="ar-button" id="ar-button">
           View in your space
@@ -81,7 +82,22 @@
         :not(:defined) > * {
           display: none;
         }
-      
+        @font-face {
+          font-family: AudiFont;
+          src: url(AudiType-Normal_4.03.otf);
+        }
+        .Audi {
+          text-align: center;
+          font-family: AudiFont;
+        }
+        @font-face {
+          font-family: DaciaSpiritFont;
+          src: url(DaciaSpirit-Bold_V1300.otf);
+        }
+        .DaciaSpirit {
+          text-align: center;
+          font-family: DaciaSpiritFont;
+        }
         model-viewer {
           background-color: #eee;
           overflow-x: hidden;
@@ -204,11 +220,12 @@
       
       </style>
       </div>
-      
+      <h2 class="DaciaSpirit">SANDERO Stepway</h2>
       <div id="webXR" class="demo">
+        
         <model-viewer id="model_1" src="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.glb" poster="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.webp"
       camera-controls environment-image="neutral" camera-orbit="-10deg 85deg auto"
-      shadow-intensity="4" ar ios-src="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.usdz">
+      shadow-intensity="4" ar ios-src="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.usdz" xr-environment>
         
         <button slot="ar-button" id="ar-button">
           View in your space
