@@ -18,7 +18,7 @@
       
       <model-viewer id="model_0" src="assets/audi_q4/Audi_Q4_purple.glb" poster="assets/audi_q4/Audi_Q4_purple.webp"
       camera-controls environment-image="neutral" camera-orbit="-10deg 85deg auto"
-      shadow-intensity="4" ar ios-src="assets/audi_q4/Audi_Q4_purple.usdz" exposure="2" ar-scale="fixed" 
+      shadow-intensity="4" ar ios-src="assets/audi_q4/Audi_Q4_purple.usdz" exposure="1.2" ar-scale="fixed" 
       ar-modes="webxr scene-viewer quick-look">
         
         <button slot="ar-button" id="ar-button" onclick="expose();">
@@ -50,9 +50,12 @@
       
       <script type="module">
 
+        const modelViewer_0 = document.getElementById("model_0");
+        const modelViewer_1 = document.getElementById("model_1");
+
       document.getElementById("model_0").addEventListener('ar-status', (event) => {
         if(event.detail.status === 'not-presenting'){
-          modelViewer_0.setAttribute("exposure",'1');
+          modelViewer_0.setAttribute("exposure",'1.2');
         }
       });
       document.getElementById("model_0").addEventListener('ar-status', (event) => {
@@ -60,8 +63,18 @@
           modelViewer_0.setAttribute("exposure",'2');
         }
       });
-        const modelViewer_0 = document.getElementById("model_0");
-        const modelViewer_1 = document.getElementById("model_1");
+
+      document.getElementById("model_1").addEventListener('ar-status', (event) => {
+        if(event.detail.status === 'not-presenting'){
+          modelViewer_1.setAttribute("exposure",'1.2');
+        }
+      });
+      document.getElementById("model_1").addEventListener('ar-status', (event) => {
+        if(event.detail.status === 'session-started'){
+          modelViewer_1.setAttribute("exposure",'2');
+        }
+      });
+        
 
         window.switchSrc = (element, name) => {
           if(name.includes("audi", 0)){
@@ -238,7 +251,7 @@
         
         <model-viewer id="model_1" src="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.glb" poster="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.webp"
       camera-controls environment-image="neutral" camera-orbit="-10deg 85deg auto"
-      shadow-intensity="4" ar ios-src="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.usdz" exposure="2" ar-scale="fixed"
+      shadow-intensity="4" ar ios-src="assets/Dacia_Sandero/Dacia_sandero_bleu_iron.usdz" exposure="1.2" ar-scale="fixed"
       ar-modes="webxr scene-viewer quick-look">
         
         <button slot="ar-button" id="ar-button">
