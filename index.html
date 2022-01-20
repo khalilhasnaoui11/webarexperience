@@ -50,7 +50,7 @@
       <script type="module">
       document.getElementById("model_0").addEventListener('ar-status', (event) => {
         if(event.detail.status === 'not-presenting'){
-          modelViewer_0.setAttribute("exposure",'1');
+          
         }
       });
         const modelViewer_0 = document.getElementById("model_0");
@@ -58,6 +58,7 @@
 
         window.switchSrc = (element, name) => {
           if(name.includes("audi", 0)){
+            modelViewer_0.setAttribute("exposure",'1');
             const base = "assets/" + name;
             modelViewer_0.src = base + '.glb';
             modelViewer_0.poster = base + '.webp';
